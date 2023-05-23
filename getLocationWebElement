@@ -1,0 +1,30 @@
+package Basic;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class getLocationWebElement {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		// TODO Auto-generated method stub
+
+        System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("https://demo.actitime.com/login.do");
+		Thread.sleep(2000);
+		
+		Point ele = driver.findElement(By.id("username")).getLocation();
+		System.out.println(ele.getX());
+		System.out.println(ele.getY());
+		
+		
+	}
+
+}
