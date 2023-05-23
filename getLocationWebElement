@@ -26,5 +26,7 @@ public class getLocationWebElement {
 		
 		
 	}
+	
+	// How to perform pull option Global repo to local repo
 
 }
